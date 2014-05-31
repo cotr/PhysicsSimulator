@@ -21,14 +21,7 @@ namespace Cotr.Physics.Simulator.Classes
             }
             set
             {
-                if (value >= 0)
-                {
-                    this.m_x = value;
-                }
-                else
-                {
-                    throw new Exception("X out of range");
-                }
+                this.m_x = value;
             }
         }
         /// <summary>
@@ -42,14 +35,7 @@ namespace Cotr.Physics.Simulator.Classes
             }
             set
             {
-                if (value >= 0)
-                {
-                    this.m_y = value;
-                }
-                else
-                {
-                    throw new Exception("Y out of range");
-                }
+                this.m_y = value;
             }
         }
         /// <summary>
