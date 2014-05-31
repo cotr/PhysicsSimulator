@@ -32,9 +32,9 @@ namespace Cotr.Physics.Simulator.Classes
             }
             return new Force(Math.Sqrt(vx * vx + vy * vy), Math.Atan2(vx, vy));
         }
-        public static implicit operator Vector(Force f)
+        public Vector SetVector()
         {
-            return new Vector(f.Value, f.Angle);
+            return new Vector(this.Value, this.Angle);
         }
     }
 }

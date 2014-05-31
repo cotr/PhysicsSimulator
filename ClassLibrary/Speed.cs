@@ -12,9 +12,9 @@ namespace Cotr.Physics.Simulator.Classes
         {
 
         }
-        public static implicit operator Vector(Speed a)
+        public Vector SetVector()
         {
-            return new Vector(a.Value, a.Angle);
+            return new Vector(this.Value, this.Angle);
         }
     }
 }
