@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cotr.Physics.Simulator.Classes
 {
-    class Point
+    public class Point
     {
         private double m_x { get; set; }
         private double m_y { get; set; }

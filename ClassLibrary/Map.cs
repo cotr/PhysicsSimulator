@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cotr.Physics.Simulator.Classes
 {
-    class Map
+    public class Map
     {
         public List<Point> Points { get; set; }
         public void Tick()

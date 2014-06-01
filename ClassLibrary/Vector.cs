@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cotr.Physics.Simulator.Classes
 {
-    class Vector
+    public class Vector
     {
         private double m_value { get; set; }
         private double m_angle { get; set; }

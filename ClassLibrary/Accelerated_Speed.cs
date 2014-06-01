@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cotr.Physics.Simulator.Classes
 {
-    class Accelerated_Speed : Vector
+    public class Accelerated_Speed : Vector
     {
         public Accelerated_Speed(double value, double angle)
             : base(value, angle)

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cotr.Physics.Simulator.Classes
 {
-    class Force : Vector
+    public class Force : Vector
     {
         public Accelerated_Speed GetAcceleratedSpeed(double m)
         {
