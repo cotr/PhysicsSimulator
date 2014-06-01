@@ -13,6 +13,7 @@ namespace Cotr.Physics.Simulator.UI
 {
     public partial class Startup : Form
     {
+        public Map map { get; set; }
         public Startup()
         {
             InitializeComponent();
@@ -28,6 +29,11 @@ namespace Cotr.Physics.Simulator.UI
 #else
             this.label1.Text += "\nBuild branch: RELEASE";
 #endif
+        }
+
+        private void viewButton_Click(object sender, EventArgs e)
+        {
+            new view(this).Show();
         }
     }
 }
