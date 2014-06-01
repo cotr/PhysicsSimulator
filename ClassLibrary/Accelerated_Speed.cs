@@ -28,13 +28,9 @@ namespace Cotr.Physics.Simulator.Classes
             }
             return new Accelerated_Speed(Math.Sqrt(vx * vx + vy * vy), Math.Atan2(vx, vy));
         }
-        public Speed SetSpeed()
+        public static explicit operator Speed(Accelerated_Speed a)
         {
-            return new Speed(this.Value, this.Angle);
-        }
-        public Vector SetVector()
-        {
-            return new Vector(this.Value, this.Angle);
+            return new Speed(a.Value, a.Angle);
         }
     }
 }

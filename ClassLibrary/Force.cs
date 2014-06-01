@@ -32,9 +32,5 @@ namespace Cotr.Physics.Simulator.Classes
             }
             return new Force(Math.Sqrt(vx * vx + vy * vy), Math.Atan2(vx, vy));
         }
-        public Vector SetVector()
-        {
-            return new Vector(this.Value, this.Angle);
-        }
     }
 }

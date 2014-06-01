@@ -12,9 +12,9 @@ namespace Cotr.Physics.Simulator.Classes
         {
 
         }
-        public Vector SetVector()
+        public static explicit operator Accelerated_Speed(Speed v)
         {
-            return new Vector(this.Value, this.Angle);
+            return new Accelerated_Speed(v.Value, v.Angle);
         }
     }
 }

@@ -126,17 +126,5 @@ namespace Cotr.Physics.Simulator.Classes
             }
             return new Vector(Math.Sqrt(vx * vx + vy * vy), Math.Atan2(vx, vy));
         }
-        public Speed GetSpeed()
-        {
-            return new Speed(this.Value, this.Angle);
-        }
-        public Force GetForce()
-        {
-            return new Force(this.Value, this.Angle);
-        }
-        public  Accelerated_Speed GetAcceleratedSpeed()
-        {
-            return new Accelerated_Speed(this.Value, this.Angle);
-        }
     }
 }
