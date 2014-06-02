@@ -67,7 +67,7 @@ namespace Cotr.Physics.Simulator.Classes
             {
                 return m_speed;
             }
-            internal set
+            set
             {
                 this.m_speed = value;
             }
@@ -78,6 +78,11 @@ namespace Cotr.Physics.Simulator.Classes
             {
                 return Force.Sum(Forces).GetAcceleratedSpeed(this.m);
             }
+        }
+        public Point()
+        {
+            this.Forces = new List<Force>();
+            this.Speed = new Speed(0, 0);
         }
     }
 }

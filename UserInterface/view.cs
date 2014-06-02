@@ -31,5 +31,10 @@ namespace Cotr.Physics.Simulator.UI
              *         Coderfox
              */
         }
+
+        private void view_Closing(object sender, FormClosingEventArgs e)
+        {
+            SForm.viewButton_Enable();
+        }
     }
 }

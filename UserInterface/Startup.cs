@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Reflection;
 using Cotr.Physics.Simulator.Classes;
+using System.Diagnostics;
 
 namespace Cotr.Physics.Simulator.UI
 {
@@ -29,11 +30,51 @@ namespace Cotr.Physics.Simulator.UI
 #else
             this.label1.Text += "\nBuild branch: RELEASE";
 #endif
+            map = new Map();
         }
 
         private void viewButton_Click(object sender, EventArgs e)
         {
             new view(this).Show();
+            this.viewButton.Enabled = false;
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+            pauseButton.Enabled = true;
+            startButton.Enabled = false;
+        }
+
+        private void pauseButton_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
+            startButton.Enabled = true;
+            pauseButton.Enabled = false;
+        }
+
+        internal void viewButton_Enable()
+        {
+            this.viewButton.Enabled = true;
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            new editor(this).Show();
+            this.editButton.Enabled = false;
+        }
+
+        internal void editButton_Enable()
+        {
+            this.editButton.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+#if DEBUG
+            Debug.WriteLine("<Startup>(timer1)Timer Ticked.");
+#endif
+            map.Tick();
         }
     }
 }

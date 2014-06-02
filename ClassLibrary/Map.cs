@@ -19,5 +19,9 @@ namespace Cotr.Physics.Simulator.Classes
                 p.Y = p.Y + (v0.Separate()[1].Value + v1.Separate()[1].Value) / 2;
             }
         }
+        public Map()
+        {
+            this.Points = new List<Point>();
+        }
     }
 }
