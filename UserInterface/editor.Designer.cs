@@ -42,21 +42,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.speedAngleBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.speedValueBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.asBox = new System.Windows.Forms.TextBox();
-            this.xBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.updatePointButton = new System.Windows.Forms.Button();
             this.yBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.updatePointButton = new System.Windows.Forms.Button();
-            this.speedAngleBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.xBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.asBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.pauseButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.mBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -131,6 +133,7 @@
             this.updateForceButton.TabIndex = 6;
             this.updateForceButton.Text = "updateForce";
             this.updateForceButton.UseVisualStyleBackColor = true;
+            this.updateForceButton.Click += new System.EventHandler(this.updateForceButton_Click);
             // 
             // groupBox1
             // 
@@ -180,6 +183,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.mBox);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.updatePointButton);
             this.groupBox2.Controls.Add(this.yBox);
@@ -195,6 +200,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "point";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.speedAngleBox);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.speedValueBox);
+            this.groupBox3.Location = new System.Drawing.Point(6, 57);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(369, 91);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "speed";
+            // 
+            // speedAngleBox
+            // 
+            this.speedAngleBox.Location = new System.Drawing.Point(57, 51);
+            this.speedAngleBox.Name = "speedAngleBox";
+            this.speedAngleBox.Size = new System.Drawing.Size(306, 26);
+            this.speedAngleBox.TabIndex = 9;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -204,6 +229,15 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "value";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 54);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 20);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "angle";
+            // 
             // speedValueBox
             // 
             this.speedValueBox.Location = new System.Drawing.Point(57, 19);
@@ -211,38 +245,15 @@
             this.speedValueBox.Size = new System.Drawing.Size(306, 26);
             this.speedValueBox.TabIndex = 1;
             // 
-            // label4
+            // updatePointButton
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 157);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(17, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "a";
-            // 
-            // asBox
-            // 
-            this.asBox.Location = new System.Drawing.Point(63, 154);
-            this.asBox.Name = "asBox";
-            this.asBox.ReadOnly = true;
-            this.asBox.Size = new System.Drawing.Size(306, 26);
-            this.asBox.TabIndex = 3;
-            // 
-            // xBox
-            // 
-            this.xBox.Location = new System.Drawing.Point(63, 186);
-            this.xBox.Name = "xBox";
-            this.xBox.Size = new System.Drawing.Size(306, 26);
-            this.xBox.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 189);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "x";
+            this.updatePointButton.Location = new System.Drawing.Point(6, 250);
+            this.updatePointButton.Name = "updatePointButton";
+            this.updatePointButton.Size = new System.Drawing.Size(369, 30);
+            this.updatePointButton.TabIndex = 7;
+            this.updatePointButton.Text = "updatePoint";
+            this.updatePointButton.UseVisualStyleBackColor = true;
+            this.updatePointButton.Click += new System.EventHandler(this.updatePointButton_Click);
             // 
             // yBox
             // 
@@ -260,44 +271,38 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "y";
             // 
-            // updatePointButton
+            // xBox
             // 
-            this.updatePointButton.Location = new System.Drawing.Point(6, 250);
-            this.updatePointButton.Name = "updatePointButton";
-            this.updatePointButton.Size = new System.Drawing.Size(369, 30);
-            this.updatePointButton.TabIndex = 7;
-            this.updatePointButton.Text = "updatePoint";
-            this.updatePointButton.UseVisualStyleBackColor = true;
-            this.updatePointButton.Click += new System.EventHandler(this.updatePointButton_Click);
+            this.xBox.Location = new System.Drawing.Point(63, 186);
+            this.xBox.Name = "xBox";
+            this.xBox.Size = new System.Drawing.Size(306, 26);
+            this.xBox.TabIndex = 5;
             // 
-            // speedAngleBox
+            // label5
             // 
-            this.speedAngleBox.Location = new System.Drawing.Point(57, 51);
-            this.speedAngleBox.Name = "speedAngleBox";
-            this.speedAngleBox.Size = new System.Drawing.Size(306, 26);
-            this.speedAngleBox.TabIndex = 9;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 189);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "x";
             // 
-            // label7
+            // asBox
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 54);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 20);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "angle";
+            this.asBox.Location = new System.Drawing.Point(63, 154);
+            this.asBox.Name = "asBox";
+            this.asBox.ReadOnly = true;
+            this.asBox.Size = new System.Drawing.Size(306, 26);
+            this.asBox.TabIndex = 3;
             // 
-            // groupBox3
+            // label4
             // 
-            this.groupBox3.Controls.Add(this.speedAngleBox);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.speedValueBox);
-            this.groupBox3.Location = new System.Drawing.Point(6, 25);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(369, 123);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "speed";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 157);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(17, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "a";
             // 
             // startButton
             // 
@@ -324,6 +329,22 @@
             // 
             this.timer1.Interval = 40;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // mBox
+            // 
+            this.mBox.Location = new System.Drawing.Point(63, 25);
+            this.mBox.Name = "mBox";
+            this.mBox.Size = new System.Drawing.Size(306, 26);
+            this.mBox.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 20);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "m";
             // 
             // editor
             // 
@@ -386,5 +407,7 @@
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button pauseButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox mBox;
+        private System.Windows.Forms.Label label8;
     }
 }

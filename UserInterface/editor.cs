@@ -84,6 +84,7 @@ namespace Cotr.Physics.Simulator.UI
             SForm.map.Points[this.pointList.SelectedIndex].Y = Convert.ToDouble(this.yBox.Text);
             SForm.map.Points[this.pointList.SelectedIndex].Speed = new Speed(
                 Convert.ToDouble(this.speedValueBox.Text), Convert.ToDouble(this.speedAngleBox.Text));
+            SForm.map.Points[this.pointList.SelectedIndex].m = Convert.ToDouble(this.mBox.Text);
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -127,6 +128,12 @@ namespace Cotr.Physics.Simulator.UI
         {
             SForm.map.Points[this.pointList.SelectedIndex].Forces.RemoveAt(this.forceList.SelectedIndex);
             this.forceList.Items.RemoveAt(this.forceList.SelectedIndex);
+        }
+
+        private void updateForceButton_Click(object sender, EventArgs e)
+        {
+            SForm.map.Points[this.pointList.SelectedIndex].Forces[this.forceList.SelectedIndex].Value = Convert.ToDouble(valueBox.Text);
+            SForm.map.Points[this.pointList.SelectedIndex].Forces[this.forceList.SelectedIndex].Angle = Convert.ToDouble(angleBox.Text);
         }
     }
 }

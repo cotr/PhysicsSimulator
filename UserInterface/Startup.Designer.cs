@@ -48,6 +48,7 @@
             // 
             // startButton
             // 
+            this.startButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.startButton.Location = new System.Drawing.Point(12, 258);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(75, 32);
@@ -58,6 +59,7 @@
             // 
             // editButton
             // 
+            this.editButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.editButton.Location = new System.Drawing.Point(174, 258);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(75, 32);
@@ -68,6 +70,7 @@
             // 
             // viewButton
             // 
+            this.viewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.viewButton.Location = new System.Drawing.Point(255, 258);
             this.viewButton.Name = "viewButton";
             this.viewButton.Size = new System.Drawing.Size(75, 32);
@@ -83,6 +86,7 @@
             // 
             // pauseButton
             // 
+            this.pauseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pauseButton.Enabled = false;
             this.pauseButton.Location = new System.Drawing.Point(93, 258);
             this.pauseButton.Name = "pauseButton";
