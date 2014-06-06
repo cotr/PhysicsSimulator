@@ -122,7 +122,7 @@
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button viewButton;
-        private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button pauseButton;
     }
 }

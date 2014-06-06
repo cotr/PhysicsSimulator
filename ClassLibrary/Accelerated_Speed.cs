@@ -26,7 +26,7 @@ namespace Cotr.Physics.Simulator.Classes
                 vx += vtmp[0].ToDouble(0);
                 vy += vtmp[1].ToDouble(90);
             }
-            return new Accelerated_Speed(Math.Sqrt(vx * vx + vy * vy), Math.Atan2(vx, vy));
+            return new Accelerated_Speed(Math.Sqrt(vx * vx + vy * vy), Math.Atan2(vy, vx) / Math.PI * 180);
         }
         public static explicit operator Speed(Accelerated_Speed a)
         {

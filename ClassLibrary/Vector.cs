@@ -26,7 +26,7 @@ namespace Cotr.Physics.Simulator.Classes
                 }
                 else
                 {
-                    this.m_value=-value;
+                    this.m_value = -value;
                     if (this.Angle < 180)
                     {
                         this.Angle = this.Angle + 180;
@@ -86,8 +86,8 @@ namespace Cotr.Physics.Simulator.Classes
         public Vector[] Separate()
         {
             Vector[] vecR = new Vector[2];
-            vecR[0] = new Vector(Math.Cos(this.Angle) * this.Value, 0);
-            vecR[1] = new Vector(Math.Sin(this.Angle) * this.Value, 90);
+            vecR[0] = new Vector(Math.Cos(this.Angle / 180 * Math.PI) * this.Value, 0);
+            vecR[1] = new Vector(Math.Sin(this.Angle / 180 * Math.PI) * this.Value, 90);
             return vecR;
         }
         /// <summary>
@@ -124,7 +124,7 @@ namespace Cotr.Physics.Simulator.Classes
                 vx += vtmp[0].ToDouble(0);
                 vy += vtmp[1].ToDouble(90);
             }
-            return new Vector(Math.Sqrt(vx * vx + vy * vy), Math.Atan2(vx, vy));
+            return new Vector(Math.Sqrt(vx * vx + vy * vy), Math.Atan2(vy, vx) / Math.PI * 180);
         }
     }
 }

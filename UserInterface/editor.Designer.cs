@@ -327,7 +327,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 40;
+            this.timer1.Interval = this.SForm.timer1.Interval;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // mBox

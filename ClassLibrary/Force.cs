@@ -9,7 +9,14 @@ namespace Cotr.Physics.Simulator.Classes
     {
         public Accelerated_Speed GetAcceleratedSpeed(double m)
         {
-            return new Accelerated_Speed(this.Value / m, this.Angle);
+            if (m != 0)
+            {
+                return new Accelerated_Speed(this.Value / m, this.Angle);
+            }
+            else
+            {
+                throw new Exception("m cannot be 0!");
+            }
         }
         public Force(double value, double angle)
             : base(value, angle)
@@ -30,7 +37,7 @@ namespace Cotr.Physics.Simulator.Classes
                 vx += vtmp[0].ToDouble(0);
                 vy += vtmp[1].ToDouble(90);
             }
-            return new Force(Math.Sqrt(vx * vx + vy * vy), Math.Atan2(vx, vy));
+            return new Force(Math.Sqrt(vx * vx + vy * vy), Math.Atan2(vy, vx) / Math.PI * 180);
         }
     }
 }
