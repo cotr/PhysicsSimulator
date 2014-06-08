@@ -109,7 +109,9 @@
             this.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Startup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Startup";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Startup_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
